@@ -8,9 +8,8 @@
     <body>
     <h2>Search Results</h2>
 
-    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField"/>
+    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value ="relevant search term"/>
     <button id="btn">Click me</button>
-    <button id="btn2">Results Link</button>
     
 <a href = "first_result.html">
     <div id = "first_result"></div>
@@ -22,10 +21,6 @@
 
 <a href = "third_result.html">
     <div id = "third_result"></div>
-</a>
-
-<a>
-    <div id = "results_link"></div>
 </a>
     
     <script>
@@ -53,7 +48,15 @@
 		RunRecipe:XB-Falcon-Body<br>\
 		RunStart:2022-10-20T06:28:33'
 
+        document.getElementById("first_result").innerHTML = result1;
+        document.getElementById("second_result").innerHTML = result2;
+        document.getElementById("third_result").innerHTML = result3
+
         function test() {
+            document.getElementById("first_result").innerHTML = "";
+            document.getElementById("second_result").innerHTML = "";
+            document.getElementById("third_result").innerHTML = "";
+
             var user_input = document.getElementById('searchTxt').value
             if (user_input == "PartInformation > Index : 1-4") {
                 document.getElementById("first_result").innerHTML = result1;
@@ -67,17 +70,6 @@
         btn.addEventListener('click', event => {
             test();
         })
-        let btn2 = document.getElementById("btn2");
-        btn2.addEventListener('click', event => {
-            myFunction();
-        })
-        
-        function myFunction() {
-        // Get the text field
-        var copyText = 'file:///C:/Users/jack%20byrnes/Documents/GitHub/Hackathon/Hackathon/target/link_from_result.html';
-        navigator.clipboard.writeText(copyText)
-        alert("Link copied")
-        }
 
     </script>
     </body>
