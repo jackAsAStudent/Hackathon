@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name = "type" id="type" >
+        <option value="autoclave">autoclave cure</option>
+    </select>
+    <input id="reg_input">
+    <input id = "file_input" type ="file" name="filename">
+    <button id="btn">Submit</button>
+    <div id = "status"></div>
+</body>
+<script>
+    var error = 'Input error: expected closing "}" <br>\
+         ...<br>\
+        "Comment2":"",<br>\
+		"Comment3":"",<br>\
+		"PartTCs":[],<br>\
+		"PartProbes":["MON9","MON10"],<br>\
+		"OtherSensors":[]<br>\
+	}]<span id="error_block" style="background-color:red;">___</span>';
+
+    var no_error = 'Success!'
+    var first_go = true;
+    let btn = document.getElementById("btn");
+    btn.addEventListener('click', event => {
+        if (first_go == true) {
+            document.getElementById("status").innerHTML = error;
+            first_go = false;
+        }
+        else {
+            document.getElementById("status").innerHTML = no_error;
+        }
+    })
+    
+</script>
+</html>
