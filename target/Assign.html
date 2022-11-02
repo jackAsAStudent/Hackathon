@@ -4,6 +4,11 @@
         <title>Quality Assurance Portal</title>
         <style>
             body{text-align:center}
+
+            ul{list-style-type:none; margin:0; padding:0; text-align:right; border-spacing:20px;}
+            li{display:inline;}
+            a{padding: 8px;}
+
             table{margin-left:auto; margin-right:auto; border-spacing:20px;}
             .scroll{width:5px; height:10px; overflow-x:scroll;}
             
@@ -11,11 +16,19 @@
     </head>
     <body>
 
-        <h1>Quality Assurance</h1>
-        <p><a href="3_quality_portal.html">Back to Load Menu</a></p>
-        <p>AC2 - 7338</p>
-        <p>2022-10-07 10:21:45</p>
-        <p>2022-10-07 14:32:16</p>
+        <nav>  
+            <ul>  
+                <li>Logged in: <b>Raymond Ly</b></li>
+                <li><a href="3_quality_portal.html">Home</a></li>
+                <li><a href="1_login_portal.html">Log Out</a></li>
+            </ul>  
+        </nav>  
+
+        <h1>Senior Quality Assurance Portal</h1>
+        <br>
+
+        <h3><b>AC2 - 7338</b></h3>
+        <b>2022-10-07</b> 10:21:45 to <b>2022-10-07</b> 14:32:16<br><br>
 
             <table class=".scroll">
                 <tr>
@@ -38,14 +51,14 @@
                     <td>Raymond Ly</td>
                     <td>0</td>
                 </tr>
-            </table>
+            </table><br>
 
-            <form href="3_quality_portal.html">
+            <form action="Assigned.html">
                 <label for="employee">Choose for Assignment:</label><br><br>
                 <select name="employee" id="employee">
-                    <option value="s3724931">Jack Byrnes</option>
-                    <option value="s3946903">Connor Wright</option>
-                    <option value="s3903031">Raymond Ly</option>
+                    <option>Jack Byrnes</option>
+                    <option>Connor Wright</option>
+                    <option>Raymond Ly</option>
                 </select><br><br>
                 <input type="submit" value="Submit">
             </form>
