@@ -1,0 +1,2 @@
+get the server running
+edit the html and css
